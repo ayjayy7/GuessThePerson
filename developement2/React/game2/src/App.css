@@ -14,9 +14,51 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #09d3ac;
+}
+.position {
+  margin-left: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+.mybackground2 {
+  background-image: url("https://media0.giphy.com/media/ToMjGpyO2OVfPLpoxu8/giphy.gif?cid=790b76113e5a50092f81ea79a25c05d93475918a85ba3899&rid=giphy.gif");
+  /* background-image: url(./giphyy.gif); */
+  background-size: cover;
+  height: 100vh;
+}
+
+.mybackground3 {
+  background-image: url("https://media.giphy.com/media/pMIAVROc0et68/giphy.gif");
+  /* background-image: url(./giphyy.gif); */
+  background-size: cover;
+  height: 100vh;
+}
+
+.mybackground {
+  background-image: url("https://media1.giphy.com/media/uOdOUCtoqZ7J6/source.gif");
+  /* background-image: url(./giphyy.gif); */
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+
+html {
+  background-color: #5e6b84;
+  /* background-image: url(./giphyy.gif); */
+  background-size: cover;
+  height: 300vh;
+}
+.button1 {
+  margin-left: 40%;
+  margin-top: 40%;
+}
+
+.button2 {
+  margin-left: 45%;
+  margin-top: 39%;
 }

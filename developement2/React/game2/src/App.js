@@ -7,6 +7,7 @@ import React, { Component } from "react";
 import imgArray from "./Images";
 import Winning from "./Components/Winning";
 import Loser from "./Components/Loser";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -14,6 +15,7 @@ class App extends Component {
     text: "",
     status: "game"
   };
+
   checkInput = image => {
     if (image.name.toLowerCase() === this.state.text.toLowerCase()) {
       this.setState({ status: "won" });
@@ -32,40 +34,42 @@ class App extends Component {
     let image = imgArray[this.state.randomIndex];
     if (this.state.status === "game") {
       return (
-        <div className="container ">
-          <div className="row">
-            <div className="col-9">
-              <div className="row border">
-                <img alt={image.name} src={image.image}></img>
-              </div>
-
-              <input
-                onChange={event => this.setState({ text: event.target.value })}
-                type="text"
-              />
-              <button
-                className="btn btn-primary"
-                onClick={() => this.checkInput(image)}
-              >
-                Submit
-              </button>
+        <div className="mybackground">
+          <div className="container ">
+            <div className="row">
+              <img
+                className="mx-auto d-block mt-5 rounded shadow-lg mb-5"
+                alt={image.name}
+                src={image.image}
+                height="500px"
+              ></img>
             </div>
+
+            <input
+              className="mx-auto d-block rounded-pill shadow"
+              onChange={event => this.setState({ text: event.target.value })}
+              type="text"
+            />
+            <button
+              className="btn btn-lg btn-warning rounded-pill position"
+              onClick={() => this.checkInput(image)}
+            >
+              Is it me?
+            </button>
           </div>
         </div>
       );
     } else if (this.state.status === "won") {
       return (
         <>
-          <Winning />
-          <button onClick={() => this.playagain()}>Play again</button>
+          <Winning playagain={this.playagain} />
         </>
       );
     } else {
       return (
         <>
           {" "}
-          <Loser state={this.state} />
-          <button onClick={() => this.playagain()}>Play again</button>
+          <Loser playagain={this.playagain} />
         </>
       );
     }

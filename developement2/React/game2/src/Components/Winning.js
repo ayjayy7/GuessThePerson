@@ -1,16 +1,13 @@
-import React, { Component } from "react";
-
-
+import React from "react";
+import img from "./win.gif";
 function Winning(props) {
-  
-
   return (
-    <div className="col-3 my-1">
-     <h3>YOU WON!!</h3>
-
-    </div>
-
+    <body className="mybackground2 ">
+      <button className="button1 " onClick={() => window.location.reload()}>
+        Play again
+      </button>
+    </body>
   );
-};
+}
 
 export default Winning;
