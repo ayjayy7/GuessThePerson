@@ -12,6 +12,9 @@ import hamza from "./img/babyHamza.png";
 import babyAziz from "./img/babyAziz.png";
 import babyKhalid from "./img/babyKhalid.png";
 import babyAmnah from "./img/babyAmnah.png";
+import babyHussain from "./img/babyHussain.png";
+import babylailaB from "./img/babylailaB.png";
+import babyHessah from "./img/babyHessah.png";
 
 const imgArray = [
   { name: "alyaa", image: babyAlyaa },
@@ -27,7 +30,10 @@ const imgArray = [
   { name: "hamza", image: hamza },
   { name: "aziz", image: babyAziz },
   { name: "khalid", image: babyKhalid },
-  { name: "amnah", image: babyAmnah }
+  { name: "amnah", image: babyAmnah },
+  { name: "hussain", image: babyHussain },
+  { name: "laila b", image: babylailaB },
+  { name: "hessah", image: babyHessah }
 ];
 
 export default imgArray;
